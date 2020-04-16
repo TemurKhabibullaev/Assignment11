@@ -6,6 +6,7 @@ import random
 import Search_Methods
 import time
 
+
 # redundant code, so make a method!
 def fill_list():
     qty = int(input("How many values would you like in the list to be sorted?"))
@@ -14,6 +15,7 @@ def fill_list():
     print("The list has been filled with random values and now contains:")
     print(my_list)
     return qty
+
 
 choice = 0
 
@@ -47,6 +49,10 @@ while choice != 6:
     elif choice == 2:
         print("You have selected a Selection Sort!")
         qty = fill_list()
+
+        start_time = time.time()
+        print(f"** It takes {(time.time() - start_time)} seconds to complete a Selection Sort with {qty} values **")
+
         my_list = Search_Methods.selection_sort(my_list)
         print("\nAfter sorting the list with Selection Sort, the list looks like the following:")
         print(my_list)
@@ -54,6 +60,9 @@ while choice != 6:
     elif choice == 3:
         print("You have selected a Insertion Sort!")
         qty = fill_list()
+
+        start_time = time.time()
+        print(f"** It takes {(time.time() - start_time)} seconds to complete an Insertion with {qty} values **")
         my_list = Search_Methods.insertion_sort(my_list)
         print("\nAfter sorting the list with Insertion Sort, the list looks like the following:")
         print(my_list)
@@ -61,6 +70,9 @@ while choice != 6:
     elif choice == 4:
         print("You have selected a Merge Sort!")
         qty = fill_list()
+
+        start_time = time.time()
+        print(f"** It takes {(time.time() - start_time)} seconds to complete a Merge Sort with {qty} values **")
         my_list = Search_Methods.merge_sort(my_list)
         print("\nAfter sorting the list with Merge Sort, the list looks like the following:")
         print(my_list)
@@ -68,6 +80,9 @@ while choice != 6:
     elif choice == 5:
         print("You have selected a Quick Sort!")
         qty = fill_list()
+
+        start_time = time.time()
+        print(f"** It takes {(time.time() - start_time)} seconds to complete a Quick Sort with {qty} values **")
         my_list = Search_Methods.quick_sort(my_list)
         print("\nAfter sorting the list with Quick Sort, the list looks like the following:")
         print(my_list)
@@ -77,3 +92,4 @@ while choice != 6:
 
     else:
         print("You have entered an invalid menu option!\n")
+
